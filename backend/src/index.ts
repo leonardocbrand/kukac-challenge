@@ -1,13 +1,15 @@
-import express, { Application, Request, Response, NextFunction } from 'express';
+import express, { Application } from 'express';
+import cors from 'cors';
+import palindromeRoute from './routes/palindrome.routes';
 
 // Boot express
 const app: Application = express();
 const port = 5000;
 
-// Application routing
-app.use('/', (req: Request, res: Response, next: NextFunction ) => {
-    res.status(200).send({data: 'Hello World!'});
-});
+app.use(express.json());
+app.use(cors());
+
+app.use(palindromeRoute);
 
 // Start server
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));
