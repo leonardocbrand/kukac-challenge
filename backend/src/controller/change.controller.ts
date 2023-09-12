@@ -1,16 +1,19 @@
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import changeService from '../services/change.service';
 
 
-const getChange = async (req: Request, res: Response) => {
-  const productValue = Number(req.body.productValue);
-  const paymentValue = Number(req.body.paymentValue)
+const getChange = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { productValue, paymentValue } = req.body
+  
+    const change = await changeService.getChange(productValue, paymentValue);
+  
+    return res.status(200).json(change)
+  } catch(error) {
+    next(error);
+  }
 
-  const change = await changeService.getChange(productValue, paymentValue);
 
-  return res.status(200).json({
-    change,
-  })
 }
 
 export default { getChange };
