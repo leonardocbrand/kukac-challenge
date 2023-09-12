@@ -7,7 +7,6 @@ const getMoneyCount = (total: number, divider: number ) => {
   return [money, rest];
 }
 
-
 const getChange = async (productValue: number, paymentValue: number) => {
   const change = paymentValue - productValue;
   
@@ -35,7 +34,7 @@ const getChange = async (productValue: number, paymentValue: number) => {
   }
 
   return {
-    message: 'Troco obtidos com sucesso.',
+    message: 'Troco obtido com sucesso.',
     data,
   }
 }
