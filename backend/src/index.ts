@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 import palindromeRoute from './routes/palindrome.routes';
+import changeRoute from './routes/change.routes';
 
 // Boot express
 const app: Application = express();
@@ -10,6 +11,6 @@ app.use(express.json());
 app.use(cors());
 
 app.use(palindromeRoute);
+app.use(changeRoute)
 
-// Start server
 app.listen(port, () => console.log(`Server is listening on port ${port}!`));
