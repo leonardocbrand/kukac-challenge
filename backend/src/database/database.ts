@@ -10,17 +10,22 @@ const getData = async () => {
   return JSON.parse(data);
 }
 
-const createData = async (name: string) => {
+const createData = async <T>(vehicle: T) => {
   const { data = [], nextID = 1 } = await getData();
 
+  const newVehicle = {
+    id: nextID,
+    ...vehicle,
+  }
+
   const newData = {
-    data: [...data, {id: nextID ,name}],
+    data: [...data, newVehicle],
     nextID: nextID + 1,
   }
 
   fs.writeFileSync(PATHNAME, JSON.stringify(newData))
 
-  return name;
+  return newVehicle;
 }
 
 export default { getData, createData };

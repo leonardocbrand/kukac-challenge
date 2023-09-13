@@ -14,9 +14,9 @@ const getVehicles = async (req: Request, res: Response, next: NextFunction) => {
 
 const createVehicles = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { name } = req.body;
+    const { modelo, anoDeFabricacao, quantidadeDePortas, marca, passageiros, vehicleType } = req.body;
 
-    const newVehicle = await vehicleService.createVehicle(name);
+    const newVehicle = await vehicleService.createVehicle(modelo, anoDeFabricacao, quantidadeDePortas, marca, passageiros, vehicleType);
 
     return res.status(200).json(newVehicle)
 

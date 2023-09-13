@@ -1,1 +1,1 @@
-{"data":[{"id":0,"name":"teste1"},{"id":1,"name":"teste2"}],"nextID":2}
+{"data":[{"id":1,"modelo":"corsa","anoDeFabricacao":1999,"quantidadeDePortas":4,"marca":"chevrolet"},{"id":2,"modelo":"teste","anoDeFabricacao":1999,"quantidadeDePortas":0,"marca":"chevrolet","rodas":2},{"id":3,"modelo":"teste","anoDeFabricacao":1999,"marca":"chevrolet","rodas":2}],"nextID":4}

@@ -1,7 +1,7 @@
 interface VeiculoInterface {
   modelo: string,
   anoDeFabricacao: string,
-  quantidadeDePortas: number,
+  quantidadeDePortas?: number,
   marca: string,
 }
 
