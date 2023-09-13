@@ -4,6 +4,7 @@ import CustomDrawer from "./components/Drawer";
 import theme from "../../themes/theme";
 import MenuIcon from '@mui/icons-material/Menu'
 import logo from '../../assets/logo.png'
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
@@ -44,12 +45,14 @@ function NavBar() {
             >
               <MenuIcon color="secondary" />
             </IconButton>
-            <Box
-              mr={4}
-              component="img"
-              src={logo}
-              sx={{ display: { xs: 'none', sm: 'block' }, width: '150px'}}
-            />
+            <Link to="/">
+              <Box
+                mr={4}
+                component="img"
+                src={logo}
+                sx={{ display: { xs: 'none', sm: 'block' }, width: '150px'}}
+              />
+            </Link>
           </Toolbar>
         </AppBar>
         <Box component="nav">

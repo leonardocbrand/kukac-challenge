@@ -48,7 +48,9 @@ export default function CustomDrawer({
         onClick={handleDrawerToggle} 
         sx={{ textAlign: 'center', bgcolor: theme.palette.primary.main, minHeight: '100vh' }}
       >
-        <Box component="img" src={logo} sx={{ my: 2, width: '150px' }} />
+        <Link to="/">
+          <Box component="img" src={logo} sx={{ my: 2, width: '150px' }} />
+        </Link>
         <Divider />
         <List>
           {navItems.map((item) => (

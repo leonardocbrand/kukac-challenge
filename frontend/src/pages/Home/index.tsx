@@ -1,6 +1,10 @@
+import MainContainer from "../../components/MainContainer/MainContainer";
+
 function Home() {
   return (
-    <h1>Teste</h1>
+    <MainContainer>
+      <h1>Testando</h1>
+    </MainContainer>
   )
 }
 
