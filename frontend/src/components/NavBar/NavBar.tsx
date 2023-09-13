@@ -10,19 +10,19 @@ function NavBar() {
   const navItems = [
   {
     name: 'Palindromo',
-    path: '/palindromo'
+    path: '/palindrome'
   },
   {
     name: 'Troco',
-    path: '/troco'
+    path: '/change'
   },
   {
     name: 'Veículos',
-    path: '/veiculos'
+    path: '/vehicles'
   },
   {
     name: 'CEP',
-    path: '/cep'
+    path: '/zipcode'
   },
 ]
 
