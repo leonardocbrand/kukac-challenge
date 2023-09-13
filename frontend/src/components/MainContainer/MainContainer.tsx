@@ -1,28 +1,28 @@
-import { Container } from "@mui/material";
-import { ReactNode } from "react";
+import { Container } from '@mui/material';
+import { ReactNode } from 'react';
 
 type MainContainerProps = {
   children: ReactNode,
   sx?: object
-}
+};
 
-function MainContainer({ children, sx }: MainContainerProps) {
+function MainContainer({ children, sx = {} }: MainContainerProps) {
   return (
     <Container
       component="main"
       maxWidth="xl"
-      sx={{
+      sx={ {
         pt: '10vh',
         minHeight: '90vh',
         display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
-        ...sx
-      }}
+        ...sx,
+      } }
     >
       {children}
     </Container>
-  )
+  );
 }
 
 export default MainContainer;

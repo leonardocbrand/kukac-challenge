@@ -1,11 +1,14 @@
-import MainContainer from "../../components/MainContainer/MainContainer";
+import GenericTitle from '../../components/GenericTitle/GenericTitle';
+import MainContainer from '../../components/MainContainer/MainContainer';
 
 function Home() {
   return (
     <MainContainer>
-      <h1>Testando</h1>
+      <GenericTitle>
+        Bem vindo
+      </GenericTitle>
     </MainContainer>
-  )
+  );
 }
 
 export default Home;
