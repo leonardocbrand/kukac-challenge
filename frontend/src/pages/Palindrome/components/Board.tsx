@@ -24,13 +24,13 @@ function Board({ data }: BoardProps) {
         gap={ 2 }
         flexWrap="wrap"
         alignItems="center"
-        justifyContent="center"
+        justifyContent={ { xs: 'center', md: 'normal' } }
       >
         {data?.data.map((num: number) => (
           <Paper
             key={ num }
             elevation={ 2 }
-            sx={ { width: 100, textAlign: 'center' } }
+            sx={ { width: 100, textAlign: 'center', fontWeight: 500 } }
           >
             {num}
           </Paper>
