@@ -1,3 +1,5 @@
 {
-  "extends": "trybe-fundamentals"
+  // ...
+  "extends": "@trybe/eslint-config-frontend/typescript"
+  // ...
 }
