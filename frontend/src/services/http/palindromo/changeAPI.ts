@@ -2,21 +2,21 @@ import { useMutation } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
 import { AxiosError } from 'axios';
 import api from '../../api';
-import { PalindromeParams } from './types';
+import { ChangeParams } from './types';
 
-const calculatePalindrome = async ({ initial, end }: PalindromeParams) => {
-  const { data } = await api.post('/palindrome', {
-    initial,
-    end,
+const calculateChange = async ({ productValue, paymentValue }: ChangeParams) => {
+  const { data } = await api.post('/change', {
+    productValue,
+    paymentValue,
   });
 
   return data;
 };
 
-const useCalculatePalindrome = () => {
+const useCalculateChange = () => {
   return useMutation({
-    mutationKey: ['palindrome'],
-    mutationFn: calculatePalindrome,
+    mutationKey: ['change'],
+    mutationFn: calculateChange,
     onSuccess: ({ message }) => toast.success(message),
     onError: (
       error: AxiosError,
@@ -24,4 +24,4 @@ const useCalculatePalindrome = () => {
   });
 };
 
-export default { useCalculatePalindrome };
+export default { useCalculateChange };
