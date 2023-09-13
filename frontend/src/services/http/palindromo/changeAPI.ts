@@ -20,7 +20,7 @@ const useCalculateChange = () => {
     onSuccess: ({ message }) => toast.success(message),
     onError: (
       error: AxiosError,
-    ) => toast.error(error?.response?.data?.message || 'Erro ao obter palindromos'),
+    ) => toast.error(error?.response?.data?.message || 'Erro ao obter o troco'),
   });
 };
 

@@ -24,3 +24,12 @@ export type ChangeResponse = {
     ones: number,
   }
 };
+
+export type VehiclesParams = {
+  modelo: string,
+  anoDeFabricacao: string,
+  quantidadeDePortas?: number,
+  passageiros?: number,
+  marca: string,
+  vehicleType: string,
+};
