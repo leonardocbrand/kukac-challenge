@@ -3,9 +3,9 @@ import vehicleService from '../services/vehicle.service';
 
 const getVehicles = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const palindrome = await vehicleService.getVehicle();
+    const vehicle = await vehicleService.getVehicle();
   
-    return res.status(200).json(palindrome)
+    return res.status(200).json(vehicle)
 
   } catch(error) {
     next(error)
