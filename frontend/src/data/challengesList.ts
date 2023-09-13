@@ -11,7 +11,7 @@ const challengesList = [
   }, {
     name: 'Veículos',
     imgSrc: 'https://i.ytimg.com/vi/8-RO9i2jl8g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDivZvVCdyY7KjZNVjt1eYYXUa-eg',
-    path: '/vehicle',
+    path: '/vehicles',
   }, {
     name: 'Cep',
     imgSrc: 'https://i.ytimg.com/vi/8-RO9i2jl8g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDivZvVCdyY7KjZNVjt1eYYXUa-eg',

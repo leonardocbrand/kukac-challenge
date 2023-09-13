@@ -3,6 +3,7 @@ import { toast } from 'react-toastify';
 import { AxiosError } from 'axios';
 import api from '../../api';
 import { VehiclesParams } from './types';
+import { queryClient } from '../../queryClient';
 
 const registerVehicle = async (
   { anoDeFabricacao,
@@ -32,9 +33,12 @@ const getVehicles = async () => {
 
 const useRegisterVehicle = () => {
   return useMutation({
-    mutationKey: ['vehicle'],
+    mutationKey: ['registerVehicle'],
     mutationFn: registerVehicle,
-    onSuccess: ({ message }) => toast.success(message),
+    onSuccess: ({ message }) => {
+      queryClient.invalidateQueries({ queryKey: ['getVehicle'] });
+      toast.success(message);
+    },
     onError: (
       error: AxiosError,
     ) => toast.error(error?.response?.data?.message || 'Erro ao registar o veículo'),
@@ -43,7 +47,7 @@ const useRegisterVehicle = () => {
 
 const useGetVehicles = () => {
   return useQuery({
-    queryKey: ['vehicle'],
+    queryKey: ['getVehicle'],
     queryFn: getVehicles,
     onSuccess: ({ message }) => toast.success(message),
     onError: (
