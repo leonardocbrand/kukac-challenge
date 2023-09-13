@@ -35,7 +35,7 @@ function ChallengeCard({ name, imgSrc, imgAlt, path }: ChallengeCardProps) {
           width={ 200 }
           height={ 200 }
         />
-        <Typography variant="h6" fontWeight={ 600 }>
+        <Typography variant="h6" fontWeight={ 300 } color="#F3B202">
           {name}
         </Typography>
       </Paper>

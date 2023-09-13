@@ -12,6 +12,7 @@ function GenericTitle({ children, sx = {} }: GenericTitleProps) {
       variant="h1"
       fontSize={ 36 }
       fontWeight={ 700 }
+      color="#F3B202"
       sx={ { ...sx } }
     >
       {children}

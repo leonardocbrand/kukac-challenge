@@ -51,7 +51,7 @@ function NavBar() {
               component="img"
               src={ logo }
               alt="Kukac logo"
-              sx={ { display: { xs: 'none', sm: 'block' }, width: '150px' } }
+              sx={ { width: '150px' } }
             />
           </Link>
         </Toolbar>
