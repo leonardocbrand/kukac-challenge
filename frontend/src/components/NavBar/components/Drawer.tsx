@@ -48,10 +48,16 @@ export default function CustomDrawer({
         sx={ {
           textAlign: 'center',
           bgcolor: theme.palette.primary.main,
+          opacity: '80%',
           minHeight: '100vh' } }
       >
         <Link to="/">
-          <Box component="img" src={ logo } sx={ { my: 2, width: '150px' } } />
+          <Box
+            component="img"
+            src={ logo }
+            alt="Kukac logo"
+            sx={ { my: 2, width: '150px' } }
+          />
         </Link>
         <Divider />
         <List>

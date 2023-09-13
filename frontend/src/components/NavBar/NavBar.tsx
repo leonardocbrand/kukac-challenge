@@ -50,6 +50,7 @@ function NavBar() {
               mr={ 4 }
               component="img"
               src={ logo }
+              alt="Kukac logo"
               sx={ { display: { xs: 'none', sm: 'block' }, width: '150px' } }
             />
           </Link>
