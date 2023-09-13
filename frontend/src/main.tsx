@@ -6,13 +6,16 @@ import { queryClient } from './services/queryClient.ts'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { CssBaseline } from '@mui/material'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <QueryClientProvider client={ queryClient }>
-      <CssBaseline />
-      <ToastContainer />
-      <App />
-    </QueryClientProvider>
+    <BrowserRouter>
+      <QueryClientProvider client={ queryClient }>
+        <CssBaseline />
+        <ToastContainer />
+        <App />
+      </QueryClientProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 )
