@@ -9,14 +9,14 @@ const getVehicle = async () => {
 }
 
 const createCar = async (car: Carro) => {
-  const newData = await database.createData<Carro>(car);
+  const newData = await database.createData<Carro>(car, 'car');
 
   return newData;
 }
 
 const createMotorcycle = async (motorcycle: Moto) => { 
 
-  const newData = await database.createData<Moto>(motorcycle);
+  const newData = await database.createData<Moto>(motorcycle, 'motorcycle');
 
   return newData;
 

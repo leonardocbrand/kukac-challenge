@@ -10,6 +10,8 @@ const validateVehicle = (req: Request, res: Response, next: NextFunction) => {
     validateField(marca, 'string', 'marca')
     validateField(vehicleType, 'string', 'vehicleType')
 
+    validateYear(Number(anoDeFabricacao));
+
     if (vehicleType === 'car') {
       validateField(quantidadeDePortas, 'number', 'quantidadeDePortas')
     } else if (vehicleType === 'motorcycle') {
@@ -47,4 +49,15 @@ const validateField = <T>(value: T, type: string, fieldName: string) => {
   }
 }
 
-export default validateVehicle;
+const validateYear = (year: number) => {
+  const currentYear = new Date().getFullYear();
+  if (year < 1950 || year > currentYear ) {
+    throw customError({
+      name: 'VALIDATION_ERROR',
+      statusCode: 400,
+      message: `O ano de ${year} é invalido.`
+    })
+  }
+}
+
+export default validateVehicle

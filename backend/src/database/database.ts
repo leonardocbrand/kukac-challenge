@@ -10,11 +10,12 @@ const getData = async () => {
   return JSON.parse(data);
 }
 
-const createData = async <T>(vehicle: T) => {
+const createData = async <T>(vehicle: T, vehicleType: string) => {
   const { data = [], nextID = 1 } = await getData();
 
   const newVehicle = {
     id: nextID,
+    vehicleType,
     ...vehicle,
   }
 
