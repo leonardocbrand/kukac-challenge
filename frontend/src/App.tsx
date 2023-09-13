@@ -1,10 +1,8 @@
-import { useState } from "react";
-import palindromeAPI from "./services/http/palindromo/palindromeAPI"
+import Router from "./routes/router"
 
 function App() {
-
   return(
-    <div>Teste</div>
+    <Router />
   )
 }
 
