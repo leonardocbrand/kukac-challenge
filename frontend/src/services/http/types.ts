@@ -33,3 +33,7 @@ export type VehiclesParams = {
   marca: string,
   vehicleType: string,
 };
+
+export type ZipcodeParams = {
+  codes: string[],
+};
