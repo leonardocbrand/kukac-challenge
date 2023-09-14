@@ -1,20 +1,25 @@
+import palindromeLogo from '../assets/palindromoLogo.png';
+import changeLogo from '../assets/changeLogo.png';
+import vehiclesLogo from '../assets/vehiclesLogo.png';
+import zipcodeLogo from '../assets/zipCodeLogo.png';
+
 const challengesList = [
   {
     name: 'Palindromo',
-    imgSrc: 'https://i.ytimg.com/vi/8-RO9i2jl8g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDivZvVCdyY7KjZNVjt1eYYXUa-eg',
+    imgSrc: palindromeLogo,
     path: '/palindrome',
   },
   {
     name: 'Troco',
-    imgSrc: 'https://i.ytimg.com/vi/8-RO9i2jl8g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDivZvVCdyY7KjZNVjt1eYYXUa-eg',
+    imgSrc: changeLogo,
     path: '/change',
   }, {
     name: 'Veículos',
-    imgSrc: 'https://i.ytimg.com/vi/8-RO9i2jl8g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDivZvVCdyY7KjZNVjt1eYYXUa-eg',
+    imgSrc: vehiclesLogo,
     path: '/vehicles',
   }, {
     name: 'Cep',
-    imgSrc: 'https://i.ytimg.com/vi/8-RO9i2jl8g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDivZvVCdyY7KjZNVjt1eYYXUa-eg',
+    imgSrc: zipcodeLogo,
     path: '/zipcode',
   },
 ];
