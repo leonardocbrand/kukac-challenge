@@ -9,7 +9,7 @@ const validateZipCode = (req: Request, res: Response, next: NextFunction) => {
       throw customError({
         name: 'VALIDATION_ERROR',
         statusCode: 400,
-        message: '',
+        message: 'Digite 5 CEPs válidos.',
       });
     }
 
