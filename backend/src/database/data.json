@@ -1,1 +1,1 @@
-{"data":[{"id":1,"vehicleType":"motorcycle","modelo":"pop100","anoDeFabricacao":"2010","marca":"honda","rodas":2,"passageiros":1}],"nextID":2}
+{"data":[{"id":1,"vehicleType":"motorcycle","modelo":"pop100","anoDeFabricacao":"2010","marca":"honda","rodas":2,"passageiros":1},{"id":2,"vehicleType":"Carro","name":"Carro","color":"Vermelho"},{"id":3,"vehicleType":"Veículo","name":"Carro","color":"Vermelho"},{"id":4,"vehicleType":"Veículo","name":"Moto","color":"Azul"},{"id":5,"vehicleType":"Carro","name":"Carro","color":"Vermelho"}],"nextID":6}
