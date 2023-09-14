@@ -3,6 +3,7 @@ import Home from '../pages/Home';
 import Palindrome from '../pages/Palindrome';
 import Change from '../pages/Change';
 import Vehicles from '../pages/Vehicles';
+import Zipcode from '../pages/Zipcode';
 
 function Router() {
   return (
@@ -11,6 +12,7 @@ function Router() {
       <Route path="/palindrome" element={ <Palindrome /> } />
       <Route path="/change" element={ <Change /> } />
       <Route path="/vehicles" element={ <Vehicles /> } />
+      <Route path="/zipcode" element={ <Zipcode /> } />
     </Routes>
   );
 }
