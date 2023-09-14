@@ -22,7 +22,7 @@ const validateZipCode = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const verifyZipCode = (code: string) => {
-  if (!code && code.length !== 8) {
+  if (!code || code.length !== 8) {
     throw customError({
       name: 'VALIDATION_ERROR',
       statusCode: 400,
