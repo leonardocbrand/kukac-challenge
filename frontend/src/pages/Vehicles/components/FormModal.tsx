@@ -6,8 +6,8 @@ import { UseMutateFunction } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 import { modalStyle } from './styles/modal';
 import { ModalContext } from '../../../contexts/modalContext';
-import { VehiclesParams } from '../../../services/http/palindromo/types';
 import FormInputs from './FormInputs';
+import { VehiclesParams } from '../../../services/http/types';
 
 type FormModalProps = {
   mutate: UseMutateFunction<any, AxiosError<unknown, any>, VehiclesParams, unknown>

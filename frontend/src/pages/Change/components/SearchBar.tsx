@@ -2,8 +2,8 @@ import { Paper, TextField, Button, Stack } from '@mui/material';
 import { useState } from 'react';
 import { UseMutateFunction } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
-import { ChangeParams } from '../../../services/http/palindromo/types';
 import { ChangesType } from '../types';
+import { ChangeParams } from '../../../services/http/types';
 
 type SearchBarProps = {
   mutate: UseMutateFunction<any, AxiosError<unknown, any>, ChangeParams, unknown>,

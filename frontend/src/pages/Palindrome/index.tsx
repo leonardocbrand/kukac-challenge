@@ -1,8 +1,8 @@
 import GenericTitle from '../../components/GenericTitle/GenericTitle';
 import MainContainer from '../../components/MainContainer/MainContainer';
-import palindromeAPI from '../../services/http/palindromo/palindromeAPI';
 import SearchBar from './components/SearchBar';
 import Board from './components/Board';
+import palindromeAPI from '../../services/http/palindromeAPI';
 
 function Palindrome() {
   const { mutate, data } = palindromeAPI.useCalculatePalindrome();

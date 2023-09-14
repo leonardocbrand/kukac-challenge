@@ -1,6 +1,6 @@
 import GenericTitle from '../../components/GenericTitle/GenericTitle';
 import MainContainer from '../../components/MainContainer/MainContainer';
-import changeAPI from '../../services/http/palindromo/changeAPI';
+import changeAPI from '../../services/http/changeAPI';
 import Board from './components/Board';
 import SearchBar from './components/SearchBar';
 

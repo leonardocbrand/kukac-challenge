@@ -5,8 +5,6 @@ const getZipCodes = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { codes } = req.body;
 
-    console.log(codes);
-
     const zipCodes = await zipcodeService.getZipCodes(codes);
 
     return res.status(200).json(zipCodes);

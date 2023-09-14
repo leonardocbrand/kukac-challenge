@@ -1,7 +1,7 @@
 import { Paper, Box, Typography } from '@mui/material';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
-import { ChangeResponse } from '../../../services/http/palindromo/types';
+import { ChangeResponse } from '../../../services/http/types';
 
 type BoardProps = {
   data: ChangeResponse,

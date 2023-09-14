@@ -2,13 +2,13 @@ import { useContext } from 'react';
 import { Button } from '@mui/material';
 import GenericTitle from '../../components/GenericTitle/GenericTitle';
 import MainContainer from '../../components/MainContainer/MainContainer';
-import vehiclesAPI from '../../services/http/palindromo/vehiclesAPI';
 import FormModal from './components/FormModal';
 import CustomTable from '../../components/CustomTable/CustomTable';
 import { ModalContext } from '../../contexts/modalContext';
 import { carsColumn, motorcyclesColumn } from '../../data/columnList';
-import { VehiclesParams } from '../../services/http/palindromo/types';
 import Tabs from './components/Tabs';
+import { VehiclesParams } from '../../services/http/types';
+import vehiclesAPI from '../../services/http/vehiclesAPI';
 
 function Vehicles() {
   const { setIsOpen } = useContext(ModalContext);

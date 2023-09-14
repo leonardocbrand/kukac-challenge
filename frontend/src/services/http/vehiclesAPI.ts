@@ -1,9 +1,9 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
 import { AxiosError } from 'axios';
-import api from '../../api';
+import api from '../api';
 import { VehiclesParams } from './types';
-import { queryClient } from '../../queryClient';
+import { queryClient } from '../queryClient';
 
 const registerVehicle = async ({
   anoDeFabricacao,
