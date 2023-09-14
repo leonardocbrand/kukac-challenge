@@ -35,7 +35,7 @@ function GenericTable({ loading, dataList, columnList = [] }: Props) {
         sx={ { display: 'flex', alignItems: 'center', justifyContent: 'center' } }
       >
         <Typography pt={ 2 } px={ 4 } variant="body1">
-          Informação não encontrada!
+          Cadastre um veículo!
         </Typography>
       </Box>
     );

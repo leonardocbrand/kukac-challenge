@@ -90,12 +90,18 @@ function FormModal({ mutate }: FormModalProps) {
           alignItems="center"
           justifyContent="space-around"
         >
-          <Button variant="contained" onClick={ cancelRegister } type="button">
+          <Button
+            variant="contained"
+            onClick={ cancelRegister }
+            type="button"
+            sx={ { color: 'white' } }
+          >
             Cancelar
           </Button>
           <Button
             variant="contained"
             type="submit"
+            sx={ { color: 'white' } }
           >
             Cadastrar
           </Button>

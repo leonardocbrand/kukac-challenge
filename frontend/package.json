@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.14.8",
+    "@mui/lab": "^5.0.0-alpha.144",
     "@mui/material": "^5.14.8",
     "@mui/styled-engine-sc": "^5.14.8",
     "@tanstack/react-query": "^4.35.0",
@@ -26,10 +27,10 @@
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
+    "@trybe/eslint-config-frontend": "^1.11.3",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@trybe/eslint-config-frontend": "^1.11.3",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"

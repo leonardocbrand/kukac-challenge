@@ -16,6 +16,7 @@ export default function TableRowSet({
   const newDataList = dataList.map((e) => {
     const newE = { ...e };
     delete newE.id;
+    delete newE.vehicleType;
     return newE;
   });
 

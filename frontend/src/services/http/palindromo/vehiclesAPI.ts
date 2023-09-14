@@ -5,14 +5,14 @@ import api from '../../api';
 import { VehiclesParams } from './types';
 import { queryClient } from '../../queryClient';
 
-const registerVehicle = async (
-  { anoDeFabricacao,
-    marca,
-    modelo,
-    vehicleType,
-    passageiros,
-    quantidadeDePortas }: VehiclesParams,
-) => {
+const registerVehicle = async ({
+  anoDeFabricacao,
+  marca,
+  modelo,
+  vehicleType,
+  passageiros,
+  quantidadeDePortas,
+}: VehiclesParams) => {
   const { data } = await api.post('/vehicle', {
     anoDeFabricacao,
     marca,
@@ -39,9 +39,8 @@ const useRegisterVehicle = () => {
       queryClient.invalidateQueries({ queryKey: ['getVehicle'] });
       toast.success(message);
     },
-    onError: (
-      error: AxiosError,
-    ) => toast.error(error?.response?.data?.message || 'Erro ao registar o veículo'),
+    onError: (error: AxiosError) => toast
+      .error(error?.response?.data?.message || 'Erro ao cadastrar o veículo'),
   });
 };
 
@@ -50,9 +49,7 @@ const useGetVehicles = () => {
     queryKey: ['getVehicle'],
     queryFn: getVehicles,
     onSuccess: ({ message }) => toast.success(message),
-    onError: (
-      error: AxiosError,
-    ) => toast.error('Erro ao buscar os veículos'),
+    onError: (error: AxiosError) => toast.error('Erro ao buscar os veículos'),
   });
 };
 
