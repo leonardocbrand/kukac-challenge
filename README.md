@@ -47,49 +47,40 @@ O usuário deverá informar 5 CEPs, e a aplicação deve consumir a API VIACep (
 ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
 ![axios](https://img.shields.io/badge/axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 
 
 ## 📋 Pré-requisitos:
 
-- Docker versão 23.0.5
-- Docker compose versão v2.5.0
+- Docker versão 24.0.5
+- Docker compose versão v2.20.2
 
 # 🛠️ Como Utilizar:
 
 1. Clone o repositório para sua máquina utilizando o comando:
   
-	`git clone git@github.com:julio-silveira/shopper-challenge.git`
+	`git clone git@github.com:leonardocbrand/kukac-challenge.git`
 
-2. Após finalizar o download, abra a pasta **/app** e crie um arquivo **.env** contendo as mesmas variáveis de ambiente presentes no arquivo **.env.example**, ou use os dados do exemplo abaixo:
-	<pre><code> DATABASE_URL=mysql://root:root@db:3306/shopper
-	PORT=3000
-	WEB_PORT=5173
-	VITE_API_URL=http://localhost:${PORT}/</code></pre>
+2. Abra um terminal na **pasta raiz do repositório** e execute o comando <code>npm run compose:up</code> ou o comando <code>docker-compose up</code> na pasta /kukac-challenge;
 
-3. Abra um terminal na **pasta raiz do repositório** e execute o comando <code>npm run compose:up</code> ou o comando <code>docker-compose up</code> na pasta /app;
+3. Aguarde todos os contêineres ficarem de pé;
 
-4. Aguarde todos os contêineres ficarem de pé;
-
-5. Após isso, você poderá acessar o frontend da aplicação localmente através do localhost na porta escolhida na variável de ambiente WEB_PORT. Por padrão, a página pode ser acessada nesse link: <link>http://localhost:5173</link>
-
-6.A API pode ser acessada também utilizando o localhost na porta escolhida na variável de ambiente PORT, por padrão <link>http://localhost:3000/<link> Já a documentação da API (Swagger) pode ser acessada na rota **/api <link>http://localhost:3000/api</link>.
-
-7. Existem dois arquivos .csv na pasta /data: rightprices.csv, que pode ser utilizado para atualizar produtos com sucesso, e wrongprices.csv, que propositalmente gera alguns erros para facilitar a testagem da aplicação.
+4. Após isso, você poderá acessar o frontend da aplicação localmente através do localhost na porta 3000, no link: <link>http://localhost:3000</link>.
 
 ## 📷 Preview:
 
-#### Upload form 1 - início
+#### Início
+![alt text](./preview/tela1.png)
+
+#### Palindromo
 ![alt text](./preview/tela2.png)
 
-#### Upload form 2 - validado com sucesso
+#### Calcular troco
 ![alt text](./preview/tela3.png)
 
-#### Feedback de sucesso ao atualizar produto (snackbar)
+#### Registrar veículos
 ![alt text](./preview/tela4.png)
 
-#### Upload form 3 - erros
+#### Buscar CEP's
 ![alt text](./preview/tela5.png)
-
-#### Mobile
-![alt text](./preview/tela6.png)
