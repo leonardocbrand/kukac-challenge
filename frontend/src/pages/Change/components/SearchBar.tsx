@@ -56,6 +56,7 @@ function SearchBar({ mutate }: SearchBarProps) {
         onClick={ handleClick }
         variant="contained"
         size="small"
+        sx={ { color: 'white' } }
       >
         Calcular Troco
       </Button>

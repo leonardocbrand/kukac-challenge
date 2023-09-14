@@ -70,7 +70,6 @@ function FormModal({ mutate }: FormModalProps) {
           <Select
             labelId="select-label"
             id="demo-simple-select-autowidth"
-            autoWidth
             name="vehicleType"
             value={ formData.vehicleType || '' }
             onChange={ handleChange }

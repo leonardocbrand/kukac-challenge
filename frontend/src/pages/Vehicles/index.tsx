@@ -20,7 +20,7 @@ function Vehicles() {
         Veículos
       </GenericTitle>
       <Button
-        sx={ { width: '40%', m: 4 } }
+        sx={ { width: '40%', m: 4, color: 'white' } }
         color="primary"
         variant="contained"
         onClick={ () => setIsOpen(true) }

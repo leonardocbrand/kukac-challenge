@@ -55,6 +55,7 @@ function SearchBar({ mutate }: SearchBarProps) {
       <Button
         onClick={ handleClick }
         variant="contained"
+        sx={ { color: 'white' } }
       >
         Buscar
       </Button>
