@@ -2,15 +2,13 @@ import { Box, Button, FormControl, InputLabel,
   MenuItem, Modal, Select, SelectChangeEvent,
   Stack, Typography } from '@mui/material';
 import { useContext, useState } from 'react';
-import { UseMutateFunction } from '@tanstack/react-query';
-import { AxiosError } from 'axios';
 import { modalStyle } from './styles/modal';
 import { ModalContext } from '../../../contexts/modalContext';
 import FormInputs from './FormInputs';
 import { VehiclesParams } from '../../../services/http/types';
 
 type FormModalProps = {
-  mutate: UseMutateFunction<any, AxiosError<unknown, any>, VehiclesParams, unknown>
+  mutate: (data: VehiclesParams) => void
 };
 
 function FormModal({ mutate }: FormModalProps) {

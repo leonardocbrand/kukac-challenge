@@ -4,30 +4,42 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import { carsColumn, motorcyclesColumn } from '../../../data/columnList';
+import { VehiclesParams } from '../../../services/http/types';
+import CustomTable from '../../../components/CustomTable/CustomTable';
+import { TabsTypes } from './types';
 
 type TabsProps = {
-  carsTable: React.ReactNode;
-  motorcyclesTable: React.ReactNode;
+  data: VehiclesParams[],
+  tabValue: TabsTypes,
+  isLoading: boolean,
+  handleChange: (event: React.SyntheticEvent, newValue: TabsTypes) => void
 };
 
-export default function Tabs({ carsTable, motorcyclesTable }: TabsProps) {
-  const [value, setValue] = React.useState('1');
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
-
+export default function Tabs({ data, tabValue, handleChange, isLoading }: TabsProps) {
   return (
     <Box sx={ { width: '100%', typography: 'body1' } }>
-      <TabContext value={ value }>
+      <TabContext value={ tabValue }>
         <Box sx={ { borderBottom: 1, borderColor: 'divider' } }>
           <TabList onChange={ handleChange } aria-label="lab API tabs example">
-            <Tab label="Carros" value="1" />
-            <Tab label="Motos" value="2" />
+            <Tab label="Carros" value="car" />
+            <Tab label="Motos" value="motorcycle" />
           </TabList>
         </Box>
-        <TabPanel value="1">{ carsTable }</TabPanel>
-        <TabPanel value="2">{ motorcyclesTable }</TabPanel>
+        <TabPanel value="car">
+          <CustomTable
+            dataList={ data }
+            loading={ isLoading }
+            columnList={ carsColumn }
+          />
+        </TabPanel>
+        <TabPanel value="motorcycle">
+          <CustomTable
+            dataList={ data }
+            loading={ isLoading }
+            columnList={ motorcyclesColumn }
+          />
+        </TabPanel>
       </TabContext>
     </Box>
   );

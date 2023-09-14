@@ -19,8 +19,10 @@ const useCalculatePalindrome = () => {
     mutationFn: calculatePalindrome,
     onSuccess: ({ message }) => toast.success(message),
     onError: (
-      error: AxiosError,
-    ) => toast.error(error?.response?.data?.message || 'Erro ao obter palindromos'),
+      error: AxiosError<{ message: string }>,
+    ) => {
+      toast.error(error?.response?.data?.message || 'Erro ao obter palindromos');
+    },
   });
 };
 

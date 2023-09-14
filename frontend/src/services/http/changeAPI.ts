@@ -19,7 +19,7 @@ const useCalculateChange = () => {
     mutationFn: calculateChange,
     onSuccess: ({ message }) => toast.success(message),
     onError: (
-      error: AxiosError,
+      error: AxiosError<{ message: string }>,
     ) => toast.error(error?.response?.data?.message || 'Erro ao obter o troco'),
   });
 };

@@ -25,7 +25,7 @@ const registerVehicle = async ({
   return data;
 };
 
-const getVehicles = async () => {
+const getVehicles = async (): Promise<VehiclesParams[]> => {
   const { data } = await api.get('/vehicle');
 
   return data;
@@ -39,7 +39,7 @@ const useRegisterVehicle = () => {
       queryClient.invalidateQueries({ queryKey: ['getVehicle'] });
       toast.success(message);
     },
-    onError: (error: AxiosError) => toast
+    onError: (error: AxiosError<{ message: string }>) => toast
       .error(error?.response?.data?.message || 'Erro ao cadastrar o veículo'),
   });
 };
@@ -48,8 +48,6 @@ const useGetVehicles = () => {
   return useQuery({
     queryKey: ['getVehicle'],
     queryFn: getVehicles,
-    onSuccess: ({ message }) => toast.success(message),
-    onError: (error: AxiosError) => toast.error('Erro ao buscar os veículos'),
   });
 };
 

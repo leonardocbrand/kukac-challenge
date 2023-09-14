@@ -23,7 +23,7 @@ function GenericTable({ loading, dataList, columnList = [] }: Props) {
   const [rowsPerPage] = useState(10);
   const count = dataList?.length;
 
-  const handlePageChange = (event: unknown, newPage: number) => {
+  const handlePageChange = (_event: unknown, newPage: number) => {
     setPage(newPage);
   };
 

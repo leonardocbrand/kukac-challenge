@@ -5,6 +5,10 @@ import Moto from '../models/moto.model';
 const getVehicle = async () => {
   const { data } = await database.getData();
 
+  if (data === undefined) {
+    return [];
+  }
+
   return data;
 };
 

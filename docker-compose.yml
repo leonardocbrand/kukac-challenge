@@ -1,0 +1,27 @@
+version: '3.8'
+name: 'desafio-kukac'
+services:
+  server:
+    container_name: kukac-server
+    build: ./backend
+    working_dir: /backend
+    ports:
+      - 5000:5000
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:5000"]
+      timeout: 10s
+      retries: 5
+
+  web:
+    container_name: kukac-client
+    build: ./frontend
+    working_dir: /frontend
+    ports:
+      - 3000:3000
+    healthcheck:
+      test: ["CMD", "lsof", "-t", "-i:3000"] 
+      timeout: 10s
+      retries: 5
+    depends_on:
+        server:
+          condition: service_healthy

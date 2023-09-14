@@ -15,7 +15,7 @@ const useSearchZipcodes = () => {
     mutationFn: searchZipcodes,
     onSuccess: ({ message }) => toast.success(message),
     onError: (
-      error: AxiosError,
+      error: AxiosError<{ message: string }>,
     ) => toast.error(error?.response?.data?.message || 'Erro ao obter os CEPs'),
   });
 };

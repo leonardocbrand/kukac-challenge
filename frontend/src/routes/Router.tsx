@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home';
 import Palindrome from '../pages/Palindrome';
 import Change from '../pages/Change';
-import Vehicles from '../pages/Vehicles';
 import Zipcode from '../pages/Zipcode';
+import { Vehicles } from '../pages/Vehicles';
 
 function Router() {
   return (
