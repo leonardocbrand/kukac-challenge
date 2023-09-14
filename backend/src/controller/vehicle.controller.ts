@@ -4,25 +4,30 @@ import vehicleService from '../services/vehicle.service';
 const getVehicles = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const vehicle = await vehicleService.getVehicle();
-  
-    return res.status(200).json(vehicle)
 
-  } catch(error) {
-    next(error)
+    return res.status(200).json(vehicle);
+  } catch (error) {
+    next(error);
   }
-}
+};
 
 const createVehicles = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const { modelo, anoDeFabricacao, quantidadeDePortas, marca, passageiros, vehicleType } = req.body;
 
-    const newVehicle = await vehicleService.createVehicle(modelo, anoDeFabricacao, quantidadeDePortas, marca, passageiros, vehicleType);
+    const newVehicle = await vehicleService.createVehicle(
+      modelo,
+      anoDeFabricacao,
+      quantidadeDePortas,
+      marca,
+      passageiros,
+      vehicleType,
+    );
 
-    return res.status(200).json(newVehicle)
-
-  } catch(error) {
-    next(error)
+    return res.status(200).json(newVehicle);
+  } catch (error) {
+    next(error);
   }
-}
+};
 
 export default { getVehicles, createVehicles };
