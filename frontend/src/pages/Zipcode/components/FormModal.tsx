@@ -4,6 +4,7 @@ import { UseMutateFunction } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
 import { modalStyle } from '../../Vehicles/components/styles/modal';
 import { ModalContext } from '../../../contexts/modalContext';
+import { ZipcodeType } from './types';
 
 type FormModalProps = {
   mutate: UseMutateFunction<any, AxiosError<unknown, any>, {
@@ -11,41 +12,37 @@ type FormModalProps = {
   }, unknown>
 };
 
-const INITIAL_STATE = {
-  codes: ['', '', '', '', ''],
-};
-
 function FormModal({ mutate }: FormModalProps) {
   const { isOpen, setIsOpen } = useContext(ModalContext);
 
-  const [formData, setFormData] = useState(INITIAL_STATE);
+  const [formData, setFormData] = useState({} as ZipcodeType);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    const index = parseInt(name.replace('code', ''), 10);
 
-    setFormData((prevData) => {
-      const updatedCodes = [...prevData.codes];
-      updatedCodes[index] = value;
-
-      return {
+    setFormData((prevData) => (
+      {
         ...prevData,
-        codes: updatedCodes,
-      };
-    });
+        [name]: value,
+      }
+    ));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    mutate(formData);
+    const zipCodes = {
+      codes: Object.values(formData),
+    };
+
+    mutate(zipCodes);
     setIsOpen(false);
-    setFormData(INITIAL_STATE);
+    setFormData({} as ZipcodeType);
   };
 
   const cancelRegister = () => {
     setIsOpen(false);
-    setFormData(INITIAL_STATE);
+    setFormData({} as ZipcodeType);
   };
 
   return (
@@ -66,35 +63,35 @@ function FormModal({ mutate }: FormModalProps) {
         </Typography>
         <TextField
           variant="outlined"
-          name="0"
+          name="code1"
           label="CEP 1"
           placeholder='Ex: "01001000"'
           onChange={ handleChange }
         />
         <TextField
           variant="outlined"
-          name="1"
+          name="code2"
           label="CEP 2"
           placeholder='Ex: "01001000"'
           onChange={ handleChange }
         />
         <TextField
           variant="outlined"
-          name="2"
+          name="code3"
           label="CEP 3"
           placeholder='Ex: "01001000"'
           onChange={ handleChange }
         />
         <TextField
           variant="outlined"
-          name="3"
+          name="code4"
           label="CEP 4"
           placeholder='Ex: "01001000"'
           onChange={ handleChange }
         />
         <TextField
           variant="outlined"
-          name="4"
+          name="code5"
           label="CEP 5"
           placeholder='Ex: "01001000"'
           onChange={ handleChange }
